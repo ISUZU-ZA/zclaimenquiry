@@ -1,0 +1,70 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
+    xmlns:table="sap.ui.table"
+>
+    <Dialog
+        id="uploadDialog"
+        title="{i18n>UploadAttachment}"
+        class="sapUiResponsivePadding"
+        draggable="true"
+        resizable="true"
+        contentWidth="47%"
+        contentHeight="50%"
+    >
+        <content>
+            <l:VerticalLayout id="_IDGenVerticalLayout1">
+                <u:FileUploader
+                    id="fileUploader1"
+                    tooltip="{i18n>UploadAttachment}"
+                    placeholder="{i18n>ChooseAttachment}"
+                    change="onFileChange"
+                />
+            </l:VerticalLayout>
+            <Text id="_IDGenText16" text="{i18n>info}" class="sapUiSmallMarginTop sapUiSmallMarginBottom sapUiSmallMarginBegin"></Text>
+            <table:Table
+                id="_IDGenTable2"
+                selectionMode="None"
+                visible="{displayModel>/fileDisplay}"
+                width="auto"
+                rows="{path:'claimFiles>/report'}"
+                rowActionCount="auto"
+                ariaLabelledBy="title"
+            >
+                <table:columns>
+                    <table:Column
+                        id="_IDGenColumn14"
+                        sortProperty="FileName"
+                    >
+                        <Label
+                            id="_IDGenLabel13"
+                            text="{i18n>FileName}"
+                            wrapping="true"
+                            class="columnHeaderHover"
+                            width="140px"
+                        />
+                        <table:template>
+                            <Button
+                                id="_IDGenButto1"
+                                ariaDescribedBy="defaultButtonDescription genericButtonDescription"
+                                icon="sap-icon://sys-cancel-2"
+                                text="{claimFiles>FileName}"
+                                press="onCancel"
+                            />
+                        </table:template>
+                    </table:Column>
+                </table:columns>
+            </table:Table>
+            
+        </content>
+        <endButton>
+            <Button
+                id="_IDGenButton3"
+                text="{i18n>Cancel}"
+                press="onUploadCancelPress"
+            />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

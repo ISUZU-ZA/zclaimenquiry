@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZIR_CLAIM_ENQUIRY_PRJ_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ClaimEnquiry" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Zinvno"/>
+                    <PropertyRef Name="Zmatnr"/>
+                    <PropertyRef Name="Zclaim"/>
+                    <PropertyRef Name="Ztype"/>
+                </Key>
+                <Property Name="Zclaimdte" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Claim Submission Dat" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Zinvpos" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zdealer" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Dealer Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zstatustext" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="ZSTATUSTEXT" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zinvno" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Billing Doc." sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Zname" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Name of Person submi" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zmatnr" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Material Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Zemail" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Contact Email" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zclaim" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="CLAIM NO" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Zordtype" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Order Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Showclaimdoc" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zdelno" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Delivery No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zstatus" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Claim Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zdelpos" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Delivery Line" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ztype" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Claim Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zdeldte" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Delivery Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zinvdte" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Invoice Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Docoutstand" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zprice" Type="Edm.Decimal" Nullable="false" Precision="12" Scale="3" sap:unicode="false" sap:label="Net Unit Price" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zmatdesc" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zreason" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Reason for" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Dgcl" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Class" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Profl" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="DGIndProfile" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zordno" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Order No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zqty" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="0" sap:unicode="false" sap:label="Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ZordDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Order Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zcrednote" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Credit Note" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zordpos" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Order Line" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zrejreas" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Reason For Rejection/Qty Change" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zstatdte" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Changing Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zuser" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User-id of Status Ch" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zuser2" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User Id of status ch" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ZpartNoRec" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Material" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zredorno" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Preceding Doc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zredelno" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Outb.deliv." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zpgrdoc" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="PGR Material Doc No." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zscrap" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Scrapping Doc No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ztono" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="TO No. Scrap or Bin" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ztocon" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="TO Confirm for Scrap" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zmvmnt" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Inv Adjust Movement" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zadjustno" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Inventory Adjust Doc" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zadjustto" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="TO no. for Adjust Do" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zadjtocon" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="TO Confirm for Adj" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zbin957" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Bin Doc No. for 957" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zbin323" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Bin Doc No. for 323" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zerror" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Error Message" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ztcode" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Transaction in Error" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zoldstat" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Claim Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ZtempStat" Type="Edm.String" Nullable="false" MaxLength="9" sap:unicode="false" sap:label="Amend Status ONLY" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ZtempMvmt" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Invent Adj Selection" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="f4ClaimStatus" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Zstatus"/>
+                </Key>
+                <Property Name="Zstatus" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Claim Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="text" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="attachment" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="FileName"/>
+                    <PropertyRef Name="MimeType"/>
+                </Key>
+                <Property Name="FileName" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MimeType" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Content" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ClaimEnquiryPrint" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Zclaim"/>
+                    <PropertyRef Name="FieldName"/>
+                </Key>
+                <Property Name="Zclaim" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="CLAIM NO" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="FieldName" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FieldValue" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZIR_CLAIM_ENQUIRY_PRJ_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ClaimEnquirySet" EntityType="ZIR_CLAIM_ENQUIRY_PRJ_SRV.ClaimEnquiry" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="f4ClaimStatusSet" EntityType="ZIR_CLAIM_ENQUIRY_PRJ_SRV.f4ClaimStatus" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="attachmentSet" EntityType="ZIR_CLAIM_ENQUIRY_PRJ_SRV.attachment" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ClaimEnquiryPrintSet" EntityType="ZIR_CLAIM_ENQUIRY_PRJ_SRV.ClaimEnquiryPrint" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://stwdevvsdev05.internal.isuzu.co.za:8002/sap/opu/odata/sap/ZIR_CLAIM_ENQUIRY_PRJ_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://stwdevvsdev05.internal.isuzu.co.za:8002/sap/opu/odata/sap/ZIR_CLAIM_ENQUIRY_PRJ_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

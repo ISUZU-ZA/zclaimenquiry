@@ -1,0 +1,110 @@
+/* --- GENERAL LAYOUT --- */
+.claimPrintContainer {
+    background: white;
+    padding: 1rem 0;
+    margin: 0 auto;
+    width: 80%; /* centered width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stickyHeader {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white; /* Avoid content going behind it */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: subtle shadow for clarity */
+}
+/* --- HEADER --- */
+.claimHeader {
+    width: 100%;
+    background-color:rgb(214, 16, 16);
+    border: 1px solid #000;
+    color: white;
+    text-align: center;
+    padding: 0.4rem 0;
+}
+.claimHeaderText {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000;
+}
+
+/* --- TABLE --- */
+.claimTable {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 0 auto !important;
+}
+.claimTable .sapUiTableCnt,
+.claimTable .sapUiTableCtrlCnt,
+.claimTable .sapUiTableCtrlScr,
+.claimTable .sapUiTableRowHdrScr {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.claimTable .sapUiTableCtrl {
+    height: auto !important;
+    border-bottom: 2px solid #000 !important;
+}
+.claimTable .sapUiTableCell {
+    border: 1px solid #000 !important;
+    padding: 3px 6px !important;
+    line-height: 1.2 !important;
+}
+.claimLabel {
+    font-weight: bold;
+    color: #000;
+}
+.claimLabel, .claimValue {
+    font-size: 0.85rem;
+    line-height: 1.2;
+}
+
+/* --- PRINT STYLES --- */
+@media print {
+    .printDateTime {
+        display: flex !important;
+        justify-content: flex-end;
+        width: 100%;
+        font-size: 8px;
+        margin-bottom: 1px;
+    }
+    @page {
+        /* size: A4 portrait; */
+        margin: 10mm;
+    }
+    
+    .sapMBar,
+    .sapMPageHeader,
+    .sapMPageFooter,
+    .noPrint {
+        display: none !important;
+    }
+
+    .claimPrintContainer {
+        width: 90% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+
+    .claimTable {
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .claimTable .sapUiTableCnt,
+    .claimTable .sapUiTableCtrlCnt {
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    .sapUiTableVSb,
+    .sapUiTableHSb {
+        display: none !important;
+    }
+}
+/* Make the FilterBar sticky at top */
